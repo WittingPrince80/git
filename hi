@@ -1,0 +1,59 @@
+import  numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+dataframe = pd.read_csv('blood_pressure.csv')
+df = dataframe.dropna()
+
+top_5 = df.tail(5)
+print(top_5)
+name = top_5['Person']
+number = top_5['BP value']
+
+
+
+plt.xlabel("Person")
+plt.xticks(rotation='vertical')
+plt.ylabel("BP Value")
+
+label = name
+value = number 
+plt.bar(label, value,width=0.4, color=('red','blue','green','pink','yellow')) #bar-grap
+
+dataframe = pd.read_csv('bmi.csv')
+df = dataframe.dropna()
+
+top_5 = df.tail(5)
+print(top_5)
+name = top_5['Person']
+number = top_5['BMI value']
+
+
+
+plt.xlabel("Person")
+plt.xticks(rotation='vertical')
+plt.ylabel("BMI Value")
+
+label = name
+value = number 
+plt.bar(label, value,width=0.4, color=('red','blue','green','pink','yellow')) #bar-grap
+
+
+dataframe = pd.read_csv('insulin.csv')
+df = dataframe.dropna()
+
+top_5 = df.tail(5)
+print(top_5)
+name = top_5['Person']
+number = top_5['insulin value']
+
+
+
+plt.xlabel("Person")
+plt.xticks(rotation='vertical')
+plt.ylabel("Insulin Value")
+
+label = name
+value = number 
+plt.bar(label, value,width=0.4, color=('red','blue','green','pink','yellow')) #bar-grap
+
